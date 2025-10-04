@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Essencial de HTML e CSS</title>
+    <style>
+        /* Reset de estilos padrões */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c;
+            color: #f1f1f1;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #6a0dad, #320b4b);
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav h1 {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        header nav ul li {
+            font-size: 1.2rem;
+        }
+
+        header nav ul li a {
+            color: #e6e6e6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ff33cc;
+        }
+
+        /* Layout Principal */
+        .conteudo-principal-blog {
+            margin-top: 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .layout-blog {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        /* Artigo */
+        .post {
+            flex: 3;
+            background: #2b1f44;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .post h2 {
+            font-size: 2.2rem;
+            color: #ff33cc;
+            margin-bottom: 15px;
+        }
+
+        .post p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .post em {
+            color: #ff66ff;
+            font-style: italic;
+        }
+
+        /* Barra Lateral */
+        .barra-lateral {
+            flex: 1;
+            background: #2b1f44;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .barra-lateral h3 {
+            color: #ff33cc;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .barra-lateral ul {
+            list-style-type: none;
+        }
+
+        .barra-lateral ul li {
+            margin-bottom: 15px;
+        }
+
+        .barra-lateral ul li a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .barra-lateral ul li a:hover {
+            color: #ff33cc;
+        }
+
+        /* Tabela de produtos */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #444;
+        }
+
+        th {
+            background-color: #320b4b;
+            color: #ff33cc;
+        }
+
+        td {
+            background-color: #2b1f44;
+            color: #fff;
+        }
+
+        td.preco {
+            text-align: right;
+        }
+
+        /* Formulário */
+        form {
+            background: #2b1f44;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #ff33cc;
+            font-size: 1.2rem;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            background-color: #1f0c34;
+            color: #fff;
+            font-size: 1.1rem;
+            border-radius: 6px;
+        }
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus {
+            outline: none;
+            border-color: #ff33cc;
+        }
+
+        .botao-submit {
+            background-color: #ff33cc;
+            color: #2b1f44;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .botao-submit:hover {
+            background-color: #ff66ff;
+        }
+
+        /* Imagem centralizada */
+        .imagem-centralizada {
+            display: block;
+            margin: 20px auto;
+            width: 70%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Efeito de Glow */
+        body {
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 51, 153, 0.8), rgba(255, 0, 255, 0.8), rgba(255, 255, 0, 0.8));
+            z-index: -1;
+            animation: glowing 1.5s infinite alternate;
+        }
+
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 10px rgba(102, 51, 153, 0.8), 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 255, 0, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 0 20px rgba(102, 51, 153, 0.8), 0 0 40px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 255, 0, 0.4);
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .layout-blog {
+                flex-direction: column;
+            }
+
+            .imagem-centralizada {
+                width: 80%;
+            }
+
+            form {
+                padding: 20px;
+            }
+
+            .botao-submit {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabeçalho-blog">
+        <div class="container">
+            <nav>
+                <a href="a">
+                    <h1>Blog do JS</h1>
+                </a>
+                <ul>
+                    <li><a href="a">Home</a></li>
+                    <li><a href="a">Sobre</a></li>
+                    <li><a href="a">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo-principal-blog">
+        <div class="container">
+            <div class="layout-blog">
+
+                <article class="post">
+                    <h2>Entendendo a Base da Web: HTML e CSS</h2>
+                    <p><em>Publicado em 20 de Setembro de 2025</em></p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi a veniam quidem, excepturi hic,
+                        voluptatum quas facilis, laborum voluptate maiores possimus id explicabo neque quaerat
+                        distinctio magnam doloremque impedit consectetur ab.</p>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto vero consequatur
+                        nemo pariatur assumenda dolore non eos labore quod quos modi est, iure, deleniti hic placeat
+                        voluptatibus animi earum nihil.</p>
+
+                    <img src="https://via.placeholder.com/700x400" alt="Imagem do Produto"
+                        class="imagem-centralizada" />
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Notebook Gamer</td>
+                                <td class="preco">R$ 4799,99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <aside class="barra-lateral">
+                    <h3>Guia de Programação</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=LMODsQ6bmIE">Guia completo de como programar</a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=Wa1Ji2t2gmc&t=234s">Formulários de HTML</a></li>
+                        <li><a
+                                href="https://www.youtube.com/watch?v=AEM3ssmyFMo&list=PLaLQ4gJXUd6B45ASQfyr5K-qSNNQIwtqf">Criando
+                                animação em CSS</a></li>
+                    </ul>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape-blog">
+        <div class="container">
+            <p>&copy; 2025 Blog JS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

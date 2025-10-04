@@ -1,0 +1,192 @@
+/* Estilo geral do corpo do site */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1c123a; /* Cor de fundo roxa para o corpo */
+    color: #f0f0f0; /* Cor de texto clara para contrastar */
+    min-height: 100vh; /* Garante que o fundo ocupe toda a altura da tela */
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO */
+.header {
+    background-color: #1c123a;
+    color: #f0f0f0;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px #d304e6;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navegacao ul li {
+    margin: 0 15px;
+}
+
+.navegacao ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navegacao ul li a:hover {
+    color: #d304e6;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    background-color: #f8f8f8;
+    flex: 1; /* Faz com que o conteúdo ocupe o restante da altura */
+}
+
+/* Seção do produto */
+.nome-produto {
+    background-color: #1c123a;
+    color: #f0f0f0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px #d304e6;
+    flex: 1 1 600px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.nome-produto h2 {
+    margin-bottom: 20px;
+}
+
+.nome-produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Tabela de preços */
+.precos {
+    margin-top: 20px;
+}
+
+.precos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.precos th, .precos td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+}
+
+.precos th {
+    background-color: #700f79;
+    color: #fff;
+}
+
+/* Características do Produto */
+.caracteristicas-produto {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.caracteristicas-produto h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #d304e6;
+}
+
+.caracteristicas-produto ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.caracteristicas-produto li {
+    background-color: #2e1f58;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 8px #d304e6;
+}
+
+/* Barra lateral */
+.barra-lateral {
+    background-color: #1c123a;
+    color: #f0f0f0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px #d304e6;
+    flex: 1 1 250px;
+    max-width: 300px;
+    height: fit-content;
+}
+
+.barra-lateral h3 {
+    margin-bottom: 15px;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.barra-lateral ul li {
+    margin-bottom: 10px;
+}
+
+.barra-lateral ul li a {
+    color: #d304e6;
+    text-decoration: none;
+}
+
+.barra-lateral ul li a:hover {
+    text-decoration: underline;
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: #1c123a;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px #d304e6;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+    .conteudo-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navegacao ul {
+        flex-direction: column;
+    }
+
+    .navegacao ul li {
+        margin: 10px 0;
+    }
+}

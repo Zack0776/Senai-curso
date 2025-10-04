@@ -1,0 +1,116 @@
+/*Estilo geral para o corpo do site*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+
+}
+
+/*CABEÇALHO*/
+/*Estilos gerais do cabeçalho*/
+.cabecalho-site {
+    display: flex;
+    /*permite que os elementos dentro de um container seja organizados de forma flexivel, permite ajusatar o alinhamento e a distribuição do espaço*/
+    justify-content: space-between;
+        /*Vai ajustar os itens nas extremidades da pagina*/
+    
+    align-items: center;
+    background-color: rgb(28, 18, 58);
+    color: #f0f0f0;
+    padding: 35px;
+    /*espaço interno entre  conteudo do elemento*/
+    box-shadow: 0 4px 8px #d304e6;
+}
+
+
+
+.cabecalho-site h1 {
+    margin: 0;
+
+}
+
+.cabecalho-site nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    /*formatação pro texto*/
+    margin-left: 20px;
+
+}
+
+.links:hover{
+    color:#e6044f;
+    text-decoration: underline;
+    
+}
+
+/*CONTEUDO PRINCIPAL*/
+/*estilos aplicados com conteudo principal do site*/
+
+.conteudo-principal {
+    display: flex;
+    /*deixa mais flexivel as seões*/
+    flex-wrap: wrap;
+    /*permite que as seções quere linhas*/
+    justify-content: center;
+    /*centraliza as seções*/
+    gap: 20px;
+    /*espaço externos entre seções*/
+    padding: 30px;
+    /*espaços internos entre as seções*/
+    color: #f0f0f0;
+}
+
+.caixa-conteudo {
+    justify-content: center;
+    padding: 15px;
+    background-color: rgb(28, 18, 58);
+    gap: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px #d304e6;
+    flex: 1 1 300px;
+    text-align: justify;
+    /*1 -> seção cresce ate ocupar todo espaço disponivel
+    1-seção diminui para ocupar o espaço disponivel 300px - determina o valor inicial, tamanho base da largura*/
+}
+
+.botao {
+    color: #3504e6;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: backgroud-color 0.3, box-shadow 0.3;
+}
+
+.botao:hover {
+    background-color: #ee0909;
+    transform: translateY(200px);
+    box-shadow: 0 4px 10px rgb(255, 0, 0);
+}
+
+.rodape-site {
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: rgb(28, 18, 58);
+    color: #f0f0f0;
+    box-shadow: 0 4px 8px #d304e6;
+    gap: 20px;
+    flex: 1 1 300px;
+}
+
+/*media query -> funciona como um "se, entao" para responsividade,
+ de forma que: se o site tiver a dimensão X, então algum ajuste 
+ será aplicadono layout para garantir a consistencia e visibilidade 
+ das informações*/
+
+ @media screen and (max-width: 615px)  {
+    .cabecalho-site {
+    flex-direction: column; /*em telas menores*/
+    text-align: center;
+ }
+ .cabecalho-site nav{
+    margin-top: 10px;
+ }
+ }
+
