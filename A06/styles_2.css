@@ -1,0 +1,126 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, rgba(228, 8, 8, 0.719), rgba(0, 26, 255, 0.671)); /* Gradiente de fundo do corpo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container com o formulário */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #819bf8, #ff7070); /* Gradiente suave de branco para cinza claro */
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 30px rgb(255, 1, 1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Estilo do conteúdo dentro do formulário */
+.content {
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Ícone de sucesso */
+.icon {
+    background-color: #34db0b;
+    display: inline-block;
+    padding: 25px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icon svg {
+    color: #fff;
+    width: 60px;
+    height: 60px;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Subtítulo */
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* Estilo do botão */
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: #2041d4;
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background-color: #ee6762;
+    transform: translateY(-4px);
+}
+
+.btn:active {
+    background-color: #388e3c;
+}
+
+/* Animação para a entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+
+    .icon svg {
+        width: 50px;
+        height: 50px;
+    }
+}
